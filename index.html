@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Secretaria de Turismo</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+    <link rel="stylesheet" href="Generales/Generales.css">
+    <link rel="stylesheet" href="Generales/DivError.css">
+
+    <link rel="stylesheet" href="Generales/desenfoqueTarjeta.css">
+
+    <link rel="stylesheet" href="Index/css/RojizarSeccion.css">
+
+    <link rel="stylesheet" href="Generales/MenuOptions.css">
+    <link rel="stylesheet" href="Index/css/MenuLogin.css">
+    <link rel="stylesheet" href="Index/css/MenuFondo.css">
+    <link rel="stylesheet" href="Index/css/MenuHidalgoPortal.css">
+
+    <link rel="stylesheet" href="Index/css/Tarjetas.css">
+    <link rel="stylesheet" href="Index/css/ParallaxCuerpo.css">
+    <link rel="stylesheet" href="Index/css/ParallaxNoticias.css">
+    <link rel="stylesheet" href="Index/css/ParallaxEventosExternos.css">
+    <link rel="stylesheet" href="Index/css/ParallaxEventosInternos.css">
+    <link rel="stylesheet" href="Index/css/ParallaxMapa.css">
+    <link rel="stylesheet" href="Index/css/scrollingx.css">
+    <link rel="stylesheet" href="Index/css/encabezado.css">
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const creditosElement = document.getElementById('Creditos');
+
+            if (creditosElement) {
+                creditosElement.addEventListener('click', function () {
+                    alert('Creado por: Arturo Juárez Monroy\nGithub: ArturoJM0A1');
+                });
+            }
+        });
+
+    </script>
+
+
+
+    <!--Para el fondo del inicio-->
+
+    <script defer src="Index/js/MenuFondo.js"></script>
+</head>
+
+<body id="body">
+
+    <!--Menu-->
+
+    <div class="Menu">
+        <div class="tab-nav-container">
+            <div class="TABmenu">
+                <i class="fa-solid fa-bars abrirmenu"></i>
+                <i class="fa-solid fa-xmark cerrarMenu"></i>
+                <p class="abrirTexto">Menu</p>
+                <p class="cerrarTexto">Cerrar</p>
+            </div>
+
+            <div class="tab pink" onclick="Inicio()">
+                <i class="fas fa-home"></i>
+                <p>Inicio</p>
+            </div>
+            <div class="tab pink" id="LoginMenu" onclick="Login()">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <p>Log in</p>
+            </div>
+            <div class="tab pink" id="VerTodasLasNoticias">
+                <i class="fa-solid fa-newspaper"></i>
+                <p>Noticias</p>
+            </div>
+            <div class="tab pink" id="VerTodosLosEventos">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p>Eventos</p>
+            </div>
+            <div class="tab pink">
+                <i class="fa-solid fa-address-book"></i>
+                <p>Directorios</p>
+            </div>
+            <div class="tab pink" id="VerTodosDescrubreHidalgo">
+                <i class="fa-solid fa-map-location"></i>
+                <p>Descubre Hidalgo</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Fondo Menu-->
+    <div class="fondoMenu">
+
+        <div class="login">
+            <form onsubmit="return validarLogin()">
+                <fieldset>
+                    <div class="iconClose" onclick="cerrarLogin()">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+
+                    <div class="iconCirculoUsuario">
+                        <img src="Index/imagenes/logohgo2019.png">
+                    </div>
+
+                    <div class="iconInput">
+                        <i class="fa-solid fa-user-large"></i>
+                        <input class="form-input" type="text" id="usuario" name="usuario" value="" required>
+                    </div>
+
+                    <div class="iconInput">
+                        <i class="fa fa-key"></i>
+                        <input class="form-input" type="password" id="pass" name="pass" value="" required>
+                    </div>
+
+                    <div class="eyes">
+                        <i class="fa-solid fa-eye" id="ojoabierto" onclick="ojoabierto()"></i>
+                        <i class="fa-solid fa-eye-slash" id="ojocerrado" onclick="ojocerrado()"></i>
+                    </div>
+
+                    <div>
+                        <button class="btnIngresar">Ingresar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="circulomenu">
+        </div>
+
+
+        <div class="MenuHidalgoPortal">
+            <div class="iconClose" onclick="CerrarMenuPortalGob()">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+
+            <p><a href="https://www.hidalgo.gob.mx/" target="_blank">Gobierno</a></p>
+            <p><a href="https://ruts.hidalgo.gob.mx/" target="_blank">Trámites</a></p>
+            <p><a href="https://transparencia.hidalgo.gob.mx/" target="_blank">Transparencia</a></p>
+            <p><a href="https://finanzas.hidalgo.gob.mx/TRANSPARENCIAFINANZAS/VentanillaCiudadana#"
+                    target="_blank">Pagos</a></p>
+            <p><a href="" target="_blank">Buzón Ciudadano</a></p>
+        </div>
+
+        <div class="DivDeBienvenida">
+            <p class="tituloSecretaria1">Bienvenido(a)</p>
+            <p class="tituloSecretaria2">Secretaria de Turismo</p>
+            <div class="logosOficiales">
+                <img class="imagenHidalgo" src="Index/imagenes/escudo_blanco.png" alt="Estado de Hidalgo">
+                <img class="imagenHidalgo" src="Index/imagenes/logohgo2019.png" alt="Estado de Gobierno">
+            </div>
+        </div>
+    </div>
+
+    <div class="DivDezlizaAbajo">
+        <img class="hidalgoGob" src="Index/imagenes/hidalgogobmx.png" alt="hidalgo.gob" onclick="MenuPortalGob()">
+        <i class="fa-solid fa-chevron-down" id="desplazarhaciaabajo1" onclick="desplazarhaciaabajo1()"></i>
+    </div>
+
+    <div class="cuerpoParallax">
+
+        <!--Noticias-->
+        <div class="parallax-container">
+            <div class="parallax-section parallax-section-1" id="SeccionNoticias"></div>
+            <div class="parallaxContentTitulo TituloNoticias">
+
+                <div class="TituloParallax">
+                    <button class="bubbly-button" id="TNoticias">Noticias
+                        <i class="fa-regular fa-hand-pointer"></i>
+                        <div class="line-dec"></div>
+                    </button>
+                </div>
+
+            </div>
+
+            <div id="TodasNoticias">
+
+                <div class="scrollingx1"> </div>
+
+                <div id="carruselNoticias">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--Eventos Externos-->
+        <div class="parallax-container">
+            <div class="parallax-section parallax-section-2"></div>
+
+            <div class="parallaxContentTitulo">
+                <div class="TituloParallax">
+                    <button class="bubbly-button" id="eventosExternos">Eventos externos
+                        <i class="fa-regular fa-hand-pointer"></i>
+                        <div class="line-dec"></div>
+                    </button>
+                </div>
+            </div>
+
+
+            <div id="TodosEventosExternos" class="TodosEventosExternos">
+
+                <div class="scrollingx2"> </div>
+
+                <div id="carruselEventosExternos">
+                </div>
+
+            </div>
+        </div>
+
+        <!--Eventos Internos-->
+        <div class="parallax-container">
+            <div class="parallax-section parallax-section-3"></div>
+
+            <div class="parallaxContentTitulo">
+                <div class="TituloParallax">
+                    <button class="bubbly-button" id="eventosInternos">Eventos internos
+                        <i class="fa-regular fa-hand-pointer"></i>
+                        <div class="line-dec"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="todosEventosInternos">
+                <div class="scrollingx3"> </div>
+
+                <div id="carruselEventosInternos">
+                </div>
+            </div>
+
+        </div>
+
+        <!--Mapa-->
+        <div class="parallax-container">
+            <div class="parallax-section parallax-section-4"></div>
+
+            <div class="parallaxContentTitulo">
+                <div class="TituloParallax">
+                    <button class="bubbly-button" id="DescrubreHidalgoindex2">Descubre Hidalgo
+                        <i class="fa-regular fa-hand-pointer"></i>
+                        <div class="line-dec"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="MapayTexto">
+
+                <div id="abrirMapa">
+                    <div id="map">
+                    </div>
+
+                    <i class="fa-solid fa-xmark cerrarMapa" onclick="cerrarMapa()"></i>
+                </div>
+
+
+                <div id="contenidoMapa">
+                    <b>Atlantes de Tula</b>
+                    <div class="MapaImagenSitio"></div>
+                    <div class="DescripicionMapaSitio">
+                        Los Atlantes de Tula se alzan hasta 4.6 metros por encima de la pirámide que los sostiene. Son 4
+                        colosos de piedra, construidos originalmente por la cultura tolteca, que dominó el centro del
+                        actual México. Éstas son quizá las figuras antropomorfas más grandes que se conservan en la
+                        región que se han encontrado hasta el momento.
+                    </div>
+                    <a class="cardboton MapaHidalgo" id="DescrubreHidalgoindex3">Descubre Hidalgo</a>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="sepearadorenbezado">
+            </div>
+            <!--Separador del reloj-->
+
+
+        </div>
+
+
+        <script>
+            document.getElementById("TNoticias").addEventListener("click", function () {
+                window.location.href = "NoticiasPublicadas.php";
+            });
+            document.getElementById("eventosExternos").addEventListener("click", function () {
+                window.location.href = "CalendarioEventos.php?externo=true";
+            });
+            document.getElementById("eventosInternos").addEventListener("click", function () {
+                window.location.href = "CalendarioEventos.php?interno=true";
+            });
+
+            document.getElementById("DescrubreHidalgoindex2").addEventListener("click", function () {
+                window.location.href = "DescubreHidalgo/index.html";
+            });
+            document.getElementById("DescrubreHidalgoindex3").addEventListener("click", function () {
+                window.location.href = "DescubreHidalgo/index.html";
+            });
+        </script>
+
+
+        <div class="parallax-container">
+
+
+            <div class="parallax-section parallax-section-5"></div>
+
+            <div class="parallaxContentTitulo TituloEncabezado">
+                <div class="encabezado">
+
+                    <div class="cielo">
+                        <div class="contenedorObj">
+                            <div class="hora clock" id="MyClockDisplay" onload="showTime()">
+                            </div>
+                            <div class="reloj"></div>
+                        </div>
+                    </div>
+
+
+
+                    <div id="CreditosCont">
+                        <i class="fa-solid fa-rocket" id="Creditos"></i>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--Scripts-->
+
+    <script src="Generales/MenuOptions.js"></script>
+    <script src="Generales/desenfoqueTarjeta.js"></script>
+    <script src="Index/js/Botones de Navegacion.js"></script>
+    <script src="Index/js/RojizarSeccion.js"></script>
+    <script src="Index/js/NoticiasTarjetas.js"></script>
+
+    <script src="Index/js/EventosExternosTarjetas.js"></script>
+    <script src="Index/js/EventosInternosTarjetas.js"></script>
+
+
+    <script src="Index/js/Acceso.js"></script>
+    <script defer src="Index/js/scrollingx.js"></script>
+    <script src="Index/js/encabezado.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>

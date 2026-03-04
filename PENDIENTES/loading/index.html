@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="loader" id="loader">
+  <div class="o"></div>
+  <div class="o"></div>
+  <div class="o"></div>
+  <div class="o"></div>
+  <div class="o"></div>
+  <div class="o"></div>
+  <div class="o"></div>
+  <div class="o"></div>
+</div>
+<!-- partial -->
+
+<script>
+  function showLoadingAnimation() {
+    document.getElementById("loader").style.display = "flex";
+  }
+
+  function hideLoadingAnimation() {
+    document.getElementById("loader").style.display = "none";
+  }
+
+  window.addEventListener("load", function() {
+    hideLoadingAnimation();
+  });
+
+  document.addEventListener("ajaxStart", function() {
+    showLoadingAnimation();
+  });
+
+  document.addEventListener("ajaxStop", function() {
+    hideLoadingAnimation();
+  });
+
+  // Llama a la función para cargar datos o realizar operaciones asíncronas cuando la página se haya cargado completamente
+  window.addEventListener("load", function() {
+    // Aquí puedes llamar a tus funciones para cargar datos o realizar operaciones asíncronas
+    // Por ejemplo:
+    // loadData();
+    // loadJSON();
+    // makeAjaxRequest();
+  });
+
+</script>
+  
+</body>
+</html>

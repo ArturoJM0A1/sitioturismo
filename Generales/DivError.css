@@ -1,0 +1,44 @@
+
+.errormensaje {
+    min-height: 300px;
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    font-size: var(--textolargo);
+    background-color: transparent;
+  }
+
+  
+.errormensaje div {
+    border-radius: 30px;
+    display: flex;
+    max-width: 200px;
+    position: absolute;
+    background-color: var(--blanco);
+    z-index: 500;
+    padding: 5px;
+    color: rgb(207, 16, 16);
+    flex-direction: column;
+}
+
+.errormensaje div i{
+    background-color: transparent;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.errormensaje div p{
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 4px;
+}
+.errormensaje div p::before {
+    content: "Lo sentimos ha ocurrido un error, Estamos trabajando en ello.";
+}
+
+.scalemap{
+    scale: 1.2;
+}

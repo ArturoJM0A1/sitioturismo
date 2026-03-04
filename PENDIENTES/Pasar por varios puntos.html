@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mapa con Ruta entre Múltiples Marcadores</title>
+    <style>
+      #map {
+        height: 100%;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      function initMap() {
+        // Coordenadas para el centro del mapa
+        const center = { lat: 40.7128, lng: -74.0060 }; // Nueva York
+
+        // Crear el mapa centrado en las coordenadas especificadas
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: center,
+        });
+
+        // Definir las ubicaciones de los marcadores
+        const locations = [
+          { lat: 40.7128, lng: -74.0060, title: "Nueva York" },
+          { lat: 40.7306, lng: -73.9352, title: "Brooklyn" },
+          { lat: 40.6501, lng: -73.9496, title: "Prospect Park" },
+          { lat: 40.7580, lng: -73.9855, title: "Times Square" }
+        ];
+
+        // Crear los marcadores
+        const markers = locations.map(location => new google.maps.Marker({
+          position: location,
+          map: map,
+          title: location.title
+        }));
+
+        // Crear un objeto DirectionsService para solicitar la ruta
+        const directionsService = new google.maps.DirectionsService();
+
+        // Crear un objeto DirectionsRenderer para mostrar la ruta en el mapa
+        const directionsRenderer = new google.maps.DirectionsRenderer({ polylineOptions: { strokeColor: '#FF0000' } });
+        directionsRenderer.setMap(map);
+
+        // Definir la solicitud de la ruta
+        const request = {
+          origin: locations[0],
+          destination: locations[3],
+          waypoints: [
+            { location: locations[1], stopover: true },
+            { location: locations[2], stopover: true }
+          ],
+          travelMode: 'DRIVING'
+        };
+
+        // Solicitar la ruta
+        directionsService.route(request, (result, status) => {
+          if (status == 'OK') {
+            directionsRenderer.setDirections(result);
+          } else {
+            console.error('Error al obtener la ruta', status);
+          }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZa9NjPPh3NGFnLsZis0j14pxYlPMGw40&callback=initMap&libraries=places"
+    type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>

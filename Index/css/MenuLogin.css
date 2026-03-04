@@ -1,0 +1,263 @@
+.login {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+    background-color: transparent;
+    justify-content: right;
+}
+
+
+.login form {
+    --tamanoLogin: 35%;
+    width: var(--tamanoLogin);
+    height: 100%;
+    position: absolute;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--vinoFuerte);
+    display: flex;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .login form {
+        font-size: 1.4rem;
+        --tamanoLogin: 100%;
+        width: var(--tamanoLogin);
+        background-color: var(--grisTransparente);
+        position: absolute;
+        display: flex;
+        align-self: start;
+    }
+}
+
+.login form fieldset {
+    border: none;
+    background-color: var(--blanco);
+    border-radius: var(--borderradius);
+    width: auto;
+}
+
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
+    /*Vertical*/
+    .login form fieldset {
+        margin-top: 7px;
+        width: 60%;
+        align-self: start;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+    /*Horizontal*/
+    .login form fieldset {
+        margin-top: 2%;
+        width: 45%;
+        align-self: start;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.login form div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 3%;
+
+}
+
+.login form .iconClose {
+    font-size: 1.7rem;
+    justify-content: end;
+}
+
+.login form .iconClose i {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .login form .iconClose i {
+        font-size: 1.5rem;
+    }
+}
+
+
+.login form .iconCirculoUsuario img {
+    font-size: 6rem;
+
+    width: 187px;
+    height: cover;
+
+    padding: 15px;
+    border-radius: var(--borderradius);
+    background-color: var(--vinoFuerte);
+}
+
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
+    /*Vertical*/
+    .login form .iconCirculoUsuario img {
+        width: 150px;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+    /*Horizontal*/
+    .login form .iconCirculoUsuario img {
+        width: 150px;
+        padding: 5px;
+        margin-top: -30px;
+        margin-bottom: 5px;
+    }
+}
+
+
+.login form .iconInput .fa-user-large,
+.login form .iconInput .fa-key {
+    font-size: 3rem;
+    margin-right: 1%;
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .login form .iconInput .fa-user-large,
+    .login form .iconInput .fa-key {
+        font-size: 1.4rem;
+    }
+}
+
+
+.login form .iconInput input {
+    background-color: var(--vinoClaro);
+    color: var(--grisFuerte);
+    border: 0;
+    border-radius: var(--borderradius);
+    width: auto;
+    font-size: 18px;
+    --tamanoInputHeight: 23px;
+    height: var(--tamanoInputHeight);
+
+    padding-left: 10px;
+
+    z-index: 2;
+}
+
+@media only screen and (max-width: 769px) {
+    .login form .iconInput input {
+        font-size: 16px;
+        width: 70%;
+
+        --tamanoInputHeight: 22px;
+        height: var(--tamanoInputHeight);
+    }
+}
+
+.login form .btnIngresar {
+    background-color: var(--vinoFuerte);
+    color: var(--blanco);
+    padding: 10px;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: -10px;
+}
+
+.login form .btnIngresar:hover {
+    background-color: var(--dorado);
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
+    /*Vertical*/
+    .login form .btnIngresar {
+        font-size: 0.8rem;
+        padding: 5px;
+        margin-top: -5px;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+    /*Horizontal*/
+    .login form .btnIngresar {
+        font-size: 0.8rem;
+        padding: 5px;
+        margin-top: -15px;
+    }
+}
+
+
+
+.eyes {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0;
+}
+
+
+
+#ojoabierto,
+#ojocerrado {
+    font-size: var(--TituloTarjeta);
+    margin-top: -20px;
+    margin-right: 10%;
+    display: flex;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: auto;
+    /* Ajusta el margen izquierdo a 'auto' para alinear a la derecha */
+}
+
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
+    /*Vertical*/
+    #ojoabierto,
+    #ojocerrado {
+        font-size: var(--textolargo);
+        margin-top: -15px;
+        margin-right: 7%;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+    /*Horizontal*/
+    #ojoabierto,
+    #ojocerrado {
+        font-size: var(--textolargo);
+        margin-top: -30px;
+        margin-right: 10%;
+    }
+}
+
+#ojocerrado {
+    display: none;
+}
+
+#ojoabierto:hover,
+#ojocerrado:hover {
+    color: var(--dorado);
+}

@@ -1,0 +1,104 @@
+#TodasNoticias {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  background-color: transparent;
+  z-index: 1;
+}
+
+#carruselNoticias {
+  scroll-behavior: smooth;
+  overflow-x: visible;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+
+.cardNoticia {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  box-shadow: var(--boxshadow);
+  background-color: var(--blancoTransparente2);
+  padding: 1.25rem;
+  margin: 0.75rem;
+  margin-bottom: 30px;
+  border-radius: var(--borderradius);
+}
+
+
+.cardNoticia::before {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  border-top-left-radius: var(--borderradius);
+  border-top-right-radius: var(--borderradius);
+  top: 0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background: var(--blancoTransparente2);
+  z-index: -10;
+  display: flex;
+
+}
+
+.cardNoticia:hover::before {
+  background: var(--blanco);
+}
+
+.cardNoticia .textNoticia {
+  font-size: var(--textolargo);
+}
+
+.cardNoticia .TitulodelaNoticia {
+  font-weight: bold;
+  font-size: var(--TituloTarjeta);
+  padding: 0;
+  margin-bottom: 0px;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /*Lineas visibleas para la tarjeta*/
+}
+
+.cardNoticia .FechadelaNoticia {
+  font-size: var(--SubtituloTarjeta);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.cardNoticia p {
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cardNoticia .textNoticia {
+  max-height: 200px;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  /*Lineas visibleas para la tarjeta*/
+}
+

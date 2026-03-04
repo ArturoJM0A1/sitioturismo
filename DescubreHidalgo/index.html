@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+    <title>Descubre Hidalgo</title>
+    <link rel="stylesheet" href="../Generales/Generales.css">
+    <link rel="stylesheet" href="../Generales/ExplorarLugar.css">
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link rel="stylesheet" href="../Generales/MenuOptions.css">
+    <link rel="stylesheet" href="../Generales/subMenu.css">
+
+</head>
+
+<body>
+
+    <div class="Menu">
+        <div class="tab-nav-container">
+            <div class="TABmenu">
+                <i class="fa-solid fa-bars abrirmenu"></i>
+                <i class="fa-solid fa-xmark cerrarMenu"></i>
+                <p class="abrirTexto">Menu</p>
+                <p class="cerrarTexto">Cerrar</p>
+            </div>
+
+            <div class="tab pink" id="VerInicio">
+                <i class="fas fa-home"></i>
+                <p>Inicio</p>
+            </div>
+            <div class="tab pink" id="VerTodasLasNoticias">
+                <i class="fa-solid fa-newspaper"></i>
+                <p>Noticias</p>
+            </div>
+            <div class="tab pink" id="VerTodosLosEventosExternos">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p>Eventos Externos</p>
+            </div>
+            <div class="tab pink" id="VerTodosLosEventosInternos">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p>Eventos Internos</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var VerInicio = document.getElementById("VerInicio");
+        VerInicio.addEventListener("click", function () {
+            window.location.href = "../index.html";
+        });
+
+        var VerTodasLasNoticias = document.getElementById("VerTodasLasNoticias");
+        VerTodasLasNoticias.addEventListener("click", function () {
+            window.location.href = "../NoticiasPublicadas.php";
+        });
+        
+        var  VerTodosLosEventosExternos = document.getElementById("VerTodosLosEventosExternos");
+        VerTodosLosEventosExternos.addEventListener("click", function () {
+            window.location.href = "../CalendarioEventos.php?externo=true";
+        });
+
+        var VerTodosLosEventosInternos = document.getElementById("VerTodosLosEventosInternos");
+        VerTodosLosEventosInternos.addEventListener("click", function () {
+            window.location.href = "../CalendarioEventos.php?interno=true";
+        });
+
+    </script>
+
+    <div id="mapaybotones">
+        <div id="map">
+        </div>
+        <div id="botonesMarcadores"></div>
+
+        <button id="trazarRuta" class="cardboton">Trazar ruta</button>
+        <button id="explore-button" class="cardboton">Explorar Lugar</button>
+
+        <div id="ventanaExplorarLugar">
+            <div class="barraTop">
+                <i class="fa-solid fa-rectangle-xmark" id="CerrarExplorarLugar"></i>
+            </div>
+            <div id="ExplorarLugar"></div>
+        </div>
+
+        
+    </div>
+
+
+
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZa9NjPPh3NGFnLsZis0j14pxYlPMGw40&callback=initMap&libraries=places"
+        type="text/javascript"></script>
+
+    <script src="js/GenerarMapa.js"></script>
+    <script src="js/GenerarRuta.js"></script>
+    <script src="js/GenerarBotonesyMarcadores.js"></script>
+    <script src="js/ExplorarLugar.js"></script>
+    <script src="../Generales/disenoEstilosMapa.js"></script>
+
+
+    <script src="../Generales/MenuOptions.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+

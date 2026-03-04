@@ -1,0 +1,185 @@
+body {
+    background-color: rgb(14, 22, 38);
+}
+
+#mapaybotones {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+    /*Horizontal*/
+    #mapaybotones {
+        flex-direction: row;
+    }
+}
+
+#map {
+    width: 83vw;
+    height: 100%;
+}
+
+
+#botonesMarcadores {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 17vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    overflow-y: auto;
+    /* Habilita el desplazamiento vertical */
+
+    background-color: transparent;
+}
+
+#botonesMarcadores .cardboton {
+    max-width: 95%;
+    animation: none;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+
+.gm-style-iw-chr {
+    height: 40px;
+
+}
+
+.gm-style-iw {
+    scale: 0.86;
+    margin-bottom: 5vh;
+    display: flex;
+    margin-top: -17px;
+    align-items: center;
+    /* Alinea los pseudo-elementos verticalmente */
+    justify-content: center;
+    /* Alinea los pseudo-elementos horizontalmente */
+
+}
+
+.gm-style-iw-tc {
+    display: none;
+}
+
+.info-window {
+    background: rgba(1, 1, 1, 0.7);
+    border-radius: 10px;
+    padding: 0px;
+    position: relative;
+    margin-right: 7px;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0.3;
+    /* Inicialmente invisible */
+    animation: fadeIn 0.3s forwards;
+    /* Animación de medio segundo */
+
+    font-size: var(--textolargo);
+
+    width: auto;
+    height: auto;
+
+    padding-bottom: 4px;
+
+    overflow-y: auto;
+    /* Habilita el desplazamiento vertical */
+}
+
+@keyframes fadeIn {
+    to {
+        background: white;
+        opacity: 1;
+        /* Opacidad final */
+    }
+}
+
+
+.info-window h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-weight: bold;
+    color: var(--vino);
+    max-width: 700px;
+}
+
+.info-window p {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    color: black;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    /*Lineas visibleas para la tarjeta*/
+}
+
+.info-window img {
+    margin-top: 16px;
+    max-height: 178px;
+    border-radius: 10px;
+    border: 2px solid var(--vino);
+    transform: rotate(-1deg);
+    margin-bottom: 10px;
+}
+
+.info-window .cardboton {
+    display: flex;
+    animation: none;
+    position: relative;
+    width: 50px;
+    margin: 0 auto;
+}
+
+
+#trazarRuta {
+    position: absolute;
+    animation: none;
+    left: 5px;
+    bottom: 28px;
+    border: 2px solid white;
+}
+
+
+#explore-button{
+    position: absolute;
+    animation: none;
+    left: 5px;
+    bottom: 71px;
+    border: 2px solid white;
+}
+
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
+    /*Vertical*/
+
+    #botonesMarcadores {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        overflow-y: auto;
+    }
+
+    #botonesMarcadores .cardboton {
+        scale: 0.7;
+    }
+
+    .info-window img {
+        max-height: 80px;
+        max-width: 130px;
+    }
+}

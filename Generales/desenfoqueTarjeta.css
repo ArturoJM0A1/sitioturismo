@@ -1,0 +1,24 @@
+/*Aparecer tras scroll*/
+.parallaxContentTitulo,
+.cardNoticia,
+.cardEventosExternos,
+.CardEventoInterno,
+#contenidoMapa,
+.TarjetaNoticia  {
+    transition: opacity 1.1s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+                filter 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+    opacity: 0.3;
+    filter: blur(1px); /* Desenfoque inicial */
+}
+
+.parallaxContentTitulo.visible,
+.cardNoticia.visible,
+.cardEventosExternos.visible,
+.CardEventoInterno.visible,
+#contenidoMapa.visible,
+.TarjetaNoticia.visible {
+    opacity: 1; /* Hacer visible */
+    filter: blur(0); /* Desenfoque al hacerse visible */
+}
+ 

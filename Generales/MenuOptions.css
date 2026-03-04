@@ -1,0 +1,170 @@
+.Menu {
+	width: 100%;
+	height: auto;
+	background-color: transparent;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+	flex-direction: row;
+}
+
+.tab-nav-container {
+	background-color: var(--blanco);
+	border-bottom-right-radius: var(--borderradius);
+	border-bottom-left-radius: var(--borderradius);
+	box-shadow: var(--boxshadow);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 22px;
+	width: auto;
+	height: 25px;
+	position: fixed;
+	color: var(--vino);
+	flex-direction: row;
+	z-index: 50;
+
+	/* Altura total padding*2=44 + height = 69 pixeles */
+	animation: tabnavfadeInRotate 0.8s ease-in-out forwards;
+}
+
+
+@keyframes tabnavfadeInRotate {
+	from {
+		transform: translateY(-13vh);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+
+.tab,
+.TABmenu {
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	margin: 0px;
+}
+
+.TABmenu {
+	display: none;
+}
+
+.tab i,
+.TABmenu i {
+	font-size: 1em;
+}
+
+.tab p,
+.TABmenu p {
+	font-weight: bold;
+	overflow: hidden;
+	font-size: 1em;
+	margin-left: 8px;
+	justify-content: center;
+	text-align: center;
+}
+
+.TABmenu:hover {
+	color: var(--dorado);
+}
+
+.tab:hover {
+	color: var(--dorado);
+	/* Cambia el color del texto en hover */
+}
+
+.tab.active.pink {
+	background-color: var(--vinoClaro);
+	color: var(--vino);
+}
+
+.tab.active.white {
+	background-color: var(--blancoTransparente);
+	color: var(--blanco);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 989px) 
+{
+	.Menu {
+		justify-content: left;
+	}
+	
+	.tab-nav-container {
+		padding: 10px;
+		flex-direction: column;
+		height: 36px;
+		width: 75px;
+		border-top-right-radius: 30px;
+		border-bottom-left-radius: 0;
+	}
+	
+	.tab {
+		overflow: hidden;
+	}
+	
+	.TABmenu {
+		display: flex;
+		background-color: transparent;
+		height: 36px;
+		margin-bottom: 13px;
+	}
+	
+	.abrirmenu,
+	.abrirTexto {
+		display: flex;
+	}
+	
+	.cerrarMenu,
+	.cerrarTexto {
+		display: none;
+	}
+	
+	.abrirmenu::after,
+	.cerrarMenu::after {
+		content: "";
+		background-color: transparent;
+		position: absolute;
+		height: 36px;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		width: 100%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: transparent;
+		border-radius: 0;
+	}
+}
+
+
+

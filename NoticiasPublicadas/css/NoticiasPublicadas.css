@@ -1,0 +1,229 @@
+.centrarTodo {
+    display: flex;
+    justify-content: center;
+    /* Alinea horizontalmente en el centro */
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+}
+
+.fondo {
+    background-image: var(--backgroundParallax);
+    border-radius: var(--borderradius);
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 98%;
+    padding: 0;
+    position: relative;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.todasNoticias {
+    background-color: var(--rojizoTransparente);
+    border-radius: var(--borderradius);
+    min-height: 100vh;
+}
+
+.TarjetaNoticia {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    height: auto;
+}
+
+.cuerpoNoticia {
+    background-color: var(--blancoTransparente2);
+    box-shadow: var(--boxshadow);
+    position: relative;
+    display: flex;
+    width: 78%;
+    height: auto;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: var(--borderradius);
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    align-items: center;
+
+    justify-content: center;
+    align-self: center;
+
+}
+
+.cuerpoNoticia:hover {
+    background-color: var(--blanco);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .cuerpoNoticia {
+        padding-top: 10px;
+        width: 90%;
+    }
+}
+
+.cuerpoNoticia .FechaNoticia {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--vino);
+    color: var(--blancoTransparente3);
+    padding: 10px 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 70%;
+    z-index: 1;
+    font-size: var(--SubtituloTarjeta);
+}
+
+@media only screen and (max-width: 768px) {
+    .cuerpoNoticia .FechaNoticia {
+        margin-left: 60%;
+    }
+}
+
+.cuerpoNoticia .contenidoNoticia {
+    padding: 5px;
+    width: auto;
+    max-height: 100%;
+    min-height: 100%;
+    text-align: justify;
+    position: relative;
+}
+
+
+.cuerpoNoticia .ImagenNoticia {
+    right: 0;
+    top: 0;
+    position: relative;
+    padding: 9px;
+    max-width: 280px;
+    min-width: 280px;
+
+    max-height: 280px;
+    min-height: 280px;
+    margin-left: 0.5%;
+
+    border-radius: var(--borderradius);
+
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    .cuerpoNoticia .ImagenNoticia {
+        display: none;
+    }
+}
+
+
+.contenidoNoticia {
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenidoNoticia .tituloyImagen {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+}
+
+.contenidoNoticia .tituloyImagen .titulo {
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin-top: 37px;
+    font-size: var(--TituloTarjeta);
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    /*Lineas visibleas para la tarjeta*/
+} 
+
+@media only screen and (max-width: 768px) {
+    .contenidoNoticia .tituloyImagen .titulo {
+        margin-top: 25px;
+    }
+}
+
+.contenidoNoticia .tituloyImagen .imagen {
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    display: none;
+    border-radius: var(--borderradius);
+}
+
+@media only screen and (max-width: 768px) {
+    .contenidoNoticia .tituloyImagen .imagen {
+        display: block;
+    }
+}
+
+
+.contenidoNoticia .textoLargo {
+    padding: 10px;
+}
+
+.contenidoNoticia .textoLargo .subtitulo {
+    font-size: var(--SubtituloTarjeta);
+    margin-bottom: 4px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /*Lineas visibleas para la tarjeta*/
+}
+
+.contenidoNoticia .textoLargo .descricion {
+    font-size: var(--textolargo);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    /*Lineas visibleas para la tarjeta*/
+}
+
+
+.contenidoNoticia .boton {
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contenidoNoticia .categorias {
+    display: flex;
+    height: auto;
+    align-self: start;
+    margin-top: 5px;
+}
+
+.contenidoNoticia .categorias div {
+    background-color: var(--grisTransparentedebil);
+    margin-right: 3px;
+    padding: 0 4px;
+    border-radius: 10px;
+    height: 33px;
+    display: flex;
+
+    align-items: center;
+    align-self: center;
+    overflow: hidden;
+}

@@ -1,0 +1,239 @@
+:root {
+    --backgroundParallax: url("../Index/imagenes/ParallaxFondo.jpg");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fondo {
+    background-image: var(--backgroundParallax);
+    border-radius: var(--borderradius);
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 98%;
+    min-height: auto;
+    display: flex;
+    padding: 0;
+}
+
+.todaNoticia {
+    background-color: var(--rojizoTransparente);
+    border-radius: var(--borderradius);
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    top: 0;
+}
+
+
+.contenedorTarjeta {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    display: flex;
+    position: relative;
+    --anchoTarjeta: 51vw;
+    width: var(--anchoTarjeta);
+    height: auto;
+    backdrop-filter: blur(0px);
+    padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedorTarjeta {
+        --anchoTarjeta: 85vw;
+        width: var(--anchoTarjeta);
+    }
+}
+
+.TarjetaNoticia {
+    background-color: var(--blanco);
+    padding: 0;
+}
+
+.TarjetaNoticia,
+.TarjetaNoticia::after,
+.TarjetaNoticia::before {
+    box-shadow: var(--boxshadow);
+    border-color: var(--grisTransparente);
+    display: flex;
+    content: '';
+    bottom: 0;
+    left: 0;
+    border-radius: var(--borderradius);
+}
+
+.TarjetaNoticia::after,
+.TarjetaNoticia::before {
+    background-color: var(--blancoTransparente1);
+}
+
+@media only screen and (max-width: 768px) {
+
+    .TarjetaNoticia,
+    .TarjetaNoticia::after,
+    .TarjetaNoticia::before {
+        background-color: var(--blanco);
+        overflow: hidden;
+    }
+}
+
+
+.TarjetaNoticia {
+    position: relative;
+}
+
+.TarjetaNoticia::after {
+    position: absolute;
+    width: 100%;
+    height: 100.09%;
+    z-index: -1;
+    transform: rotate(0.7deg);
+}
+
+.TarjetaNoticia::before {
+    position: absolute;
+    width: 100%;
+    height: 100.09%;
+    transform: rotate(-0.7deg);
+    z-index: -2;
+}
+
+.caracteristicasTarjeta {
+    --paddingGlobal: 20px;
+    padding: var(--paddingGlobal);
+    margin: 0;
+    position: relative;
+    border-radius: var(--borderradius);
+}
+
+
+.tituloyImagen {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+}
+
+.titulo {
+    font-weight: bold;
+    text-align: center;
+    font-size: var(--TituloTarjeta);
+    color: var(--blanco);
+    margin-bottom: 15px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+
+.titulo::before {
+    content: "";
+    position: absolute;
+    width: var(--anchoTarjeta);
+    height: 200px;
+    margin-top: calc(var(--paddingGlobal)*-1); 
+    background-color: var(--grisFuerte); 
+    top: 0;
+    z-index: 0;
+    border-radius: var(--borderradius);
+    z-index: -1;
+}
+
+.Imagen {
+    margin-top: 10px;
+    width: 65%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--borderradius);
+    z-index: 1;
+    border: 3px solid var(--blanco);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .Imagen {
+        width: 100%;
+        height: 35vh;
+    }
+}
+
+.FechaNoticia {
+    padding: 10px 5px;
+    border-radius: 20px;
+    background-color: var(--grisFuerte);
+    color: var(--blancoTransparente3);
+    font-size: var(--SubtituloTarjeta);
+    width: auto;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: -15px;
+    z-index: 1;
+}
+
+
+.subtitulo {
+    margin: 0;
+    padding: 0;
+    font-size: var(--SubtituloTarjeta);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.descricion {
+    margin: 0;
+    padding: 0;
+    font-size: var(--textolargo);
+    white-space: pre-line;
+}
+
+
+hr {
+    border: none;
+    background: url("../Index/imagenes/hr.png") no-repeat center;
+    /*https://s3-us-west-2.amazonaws.com/s.cdpn.io/5175/hr-01.png*/
+    background-color: transparent;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.autorenlace{
+    text-align: center;
+}
+
+a{
+    color: inherit; 
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    color: var(--dorado);
+}
+
+
+.enlaceCompleto{
+    display: none;
+}

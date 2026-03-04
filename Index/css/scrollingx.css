@@ -1,0 +1,60 @@
+:root {
+  --Scrolling2: url("../../Index/imagenes/Scrolling2.png");
+  --Scrolling1: url("../../Index/imagenes/Scrolling1.png");
+}
+
+.scrollingx1,
+.scrollingx2,
+.scrollingx3 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  display: none;
+  transform: rotate(-8deg) translateX(-10vw);
+  opacity: 1;
+  top: 0;
+  z-index: 5;
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  animation: scrollingxAnimacion 1.5s infinite linear;
+  background-image: var(--Scrolling1);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .scrollingx1,
+  .scrollingx2,
+  .scrollingx3 {
+    background-image: var(--Scrolling2);
+    animation: scrollingxAnimacion 1s infinite linear;
+  }
+}
+
+
+@keyframes scrollingxAnimacion {
+  50% {
+    transform: rotate(8deg) translateX(10vw);
+    /* Ajusta los valores según sea necesario */
+  }
+
+  100% {
+    transform: rotate(-8deg) translateX(-10vw);
+  }
+}
+
+
+.scrollingx1.aparecer,
+.scrollingx2.aparecer,
+.scrollingx3.aparecer {
+  display: flex;
+}
+
+
+.scrollingx1.desaparecer,
+.scrollingx2.desaparecer,
+.scrollingx3.desaparecer {
+  display: none;
+}

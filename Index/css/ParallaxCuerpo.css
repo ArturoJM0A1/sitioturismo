@@ -1,0 +1,321 @@
+.cuerpoParallax {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .cuerpoParallax {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.parallax-container {
+    width: 98%;
+    height: auto;
+    position: relative;
+}
+
+
+
+.parallax-section {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-section-1 {
+    background-image: var(--backgroundParallax);
+    border-top-right-radius: var(--borderradius);
+    border-top-left-radius: var(--borderradius);
+}
+
+.parallax-section-2 {
+    background-image: var(--backgroundParallax);
+    border-radius: none;
+}
+
+.parallax-section-3 {
+    background-image: var(--backgroundParallax);
+    border-radius: none;
+}
+
+.parallax-section-4 {
+    background-image: var(--backgroundParallax);
+    border-radius: none;
+
+}
+
+
+.parallax-section-5 {
+    background-image: var(--backgroundParallax);
+    border-bottom-right-radius: var(--borderradius);
+    border-bottom-left-radius: var(--borderradius);
+}
+
+
+
+.parallaxContentTitulo {
+    display: flex;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+    position: relative;
+    z-index: 1;
+    background-color: var(--grisFuerte);
+    height: 10vh;
+    /* Puedes ajustar esta altura según sea necesario */
+    color: white;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
+    /*Vertical*/
+    .parallaxContentTitulo {
+        height: 10vh;
+    }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+    /*Horizontal*/
+    .parallaxContentTitulo {
+        height: 15vh;
+    }
+}
+
+
+.TituloNoticias {
+    border-top-right-radius: var(--borderradius);
+    border-top-left-radius: var(--borderradius);
+}
+
+
+.TituloEncabezado {
+    border-bottom-right-radius: var(--borderradius);
+    border-bottom-left-radius: var(--borderradius);
+}
+
+.TituloParallax {
+    margin-top: -10px;
+}
+
+
+
+
+.bubbly-button {
+    display: flex;
+    font-family: "Helvetica", "Arial", sans-serif;
+    display: inline-block;
+    font-size: var(--TituloSeccion);
+    padding-top: 0.21em;
+    padding-bottom: 0.25em;
+    margin-top: 5%;
+    margin-bottom: 2px;
+    height: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    animation: brillar 2s infinite;
+    text-shadow: 2px 2px 4px var(--dorado);
+}
+
+
+
+.bubbly-button:focus {
+    outline: 0;
+}
+
+.bubbly-button:before,
+.bubbly-button:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+
+
+.bubbly-button:before {
+    display: none;
+    top: -75%;
+    background-image: 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, transparent 4px, var(--dorado) 4px, transparent 6px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, transparent 2px, var(--dorado) 3px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px),
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, transparent 4px, var(--dorado) 4px, transparent 6px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, transparent 2px, var(--dorado) 3px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px);
+    background-size: 
+        15px 15px, 
+        30px 30px, 
+        25px 25px, 
+        30px 30px, 
+        28px 28px, 
+        15px 15px, 
+        25px 25px, 
+        15px 15px, 
+        28px 28px,
+        15px 15px, 
+        30px 30px, 
+        25px 25px, 
+        30px 30px, 
+        28px 28px, 
+        15px 15px, 
+        25px 25px, 
+        15px 15px, 
+        28px 28px; 
+}
+
+.bubbly-button:after {
+    display: none;
+    bottom: -75%;
+    background-image: 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, transparent 4px, var(--dorado) 4px, transparent 6px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, transparent 2px, var(--dorado) 3px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px),
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, transparent 4px, var(--dorado) 4px, transparent 6px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, transparent 2px, var(--dorado) 3px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px), 
+        radial-gradient(circle, var(--dorado) 4px, transparent 4px);
+        background-size: 
+        15px 15px, 
+        30px 30px, 
+        25px 25px, 
+        30px 30px, 
+        28px 28px, 
+        15px 15px, 
+        25px 25px, 
+        15px 15px, 
+        28px 28px,
+        15px 15px, 
+        30px 30px, 
+        25px 25px, 
+        30px 30px, 
+        28px 28px, 
+        15px 15px, 
+        25px 25px, 
+        15px 15px, 
+        28px 28px; 
+}
+
+
+
+.bubbly-button:active {
+    transform: scale(0.9);
+    background-color: var(--dorado);
+    box-shadow: var(--boxshadow);
+}
+
+.bubbly-button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards infinite;
+}
+
+.bubbly-button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards infinite;
+}
+
+.bubbly-button:hover:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards infinite;
+}
+
+.bubbly-button:hover:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards infinite;
+}
+
+@keyframes topBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+@keyframes bottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+        scale: 1.15;
+    }
+}
+
+
+
+.line-dec {
+    width: auto;
+    height: 2.2px;
+    background-color: var(--dorado);
+    margin: 3px auto 0px auto;
+    border-radius: 13px;
+    align-items: center;
+}
+

@@ -1,0 +1,178 @@
+/* Estilo del cuerpo del formulario */
+.fondo {
+    --backgroundParallax: url("../Index/imagenes/ParallaxFondo.jpg");
+    background-image: var(--backgroundParallax);
+    border-radius: var(--borderradius);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 98%;
+    min-height: 100vh;
+    padding: 0;
+    position: relative;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+}
+
+.todoform {
+    background-color: var(--rojizoTransparente);
+    border-radius: var(--borderradius);
+    width: 100%;
+    height: auto;
+}
+
+
+/* Estilo del formulario */
+form {
+    width: 51%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--blancoTransparente3);
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--borderradius);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    form {
+        width: 85%;
+    }
+}
+
+h2 {
+    font-size: var(--TituloTarjeta);
+}
+
+/* Estilo de las etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 16px;
+    font-size: var(--SubtituloTarjeta);
+}
+
+/* Estilo de los campos de entrada */
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1.2px solid var(--grisFuerte);
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Estilo del contenedor de municipios */
+#cMunicipio {
+    display: flex;
+    flex-direction: column; /* Para que los elementos se apilen verticalmente */
+    align-items: center; /* Para centrar los elementos horizontalmente */
+    width: 100%;
+}
+
+#cMunicipio div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+/* Estilo de cada municipio y su checkbox */
+#cMunicipio input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    align-items: center; /* Para alinear verticalmente los elementos */
+    justify-content: center;
+}
+
+/* Estilo de las etiquetas de municipio */
+#cMunicipio label {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-self: center;
+    align-items: center; /* Para alinear verticalmente los elementos */
+    justify-content: center;
+}
+
+
+/* Estilo del área de texto */
+textarea {
+    resize: none;
+    min-height: 90vh;
+    width: 80%;
+    max-height: auto;
+    text-align: left;
+}
+
+.DesEvento {
+    resize: none;
+    min-height: 33vh;
+    width: 80%;
+    max-height: auto;
+    text-align: left;
+}
+
+.seleccionarImagen {
+    border: 1.2px solid var(--grisFuerte);
+    background-color: var(--vinoClaro);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    max-width: 96%;
+    white-space: normal; /* Permitir el salto de línea dentro del contenedor */
+    word-break: break-all; /* Forzar el quiebre de palabra en caso de que supere el ancho máximo */
+}
+
+.seleccionarImagen:hover {
+    color: var(--blanco);
+    background-color: var(--dorado);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.imagenColocada {
+    margin-top: 0;
+    border-radius: 5px;
+    max-width: 70%;
+    margin-bottom: 30px;
+}
+
+.ContentbtnEnviar {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.opcionNinguno{
+    color: rgb(91, 87, 87);
+    background-color: rgba(191, 188, 188, 0.2);
+}

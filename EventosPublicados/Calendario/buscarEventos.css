@@ -1,0 +1,42 @@
+#resultadosBusquedaEventos {
+    margin-top: 18vh;
+    display: none;
+    justify-content: center;
+    height: 100vh; 
+}
+
+.eventoEnBuscar {
+    background-color: var(--blancoTransparente2);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    max-width: 77vw;
+
+    border: 1px solid;
+    border-radius: 0.3rem;
+    box-shadow: 1.3px 1.3px 0 1.3px var(--vino);
+}
+
+.eventoEnBuscar h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.eventoEnBuscar p {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+}
+
+.eventoEnBuscar .descripcion{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    /*Lineas visibleas para la tarjeta*/
+}
+
+.eventoEnBuscar a{
+    font-size: 1.2rem;
+}

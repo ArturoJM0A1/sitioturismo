@@ -1,0 +1,26 @@
+.imagen-evento {
+    width: 150px; /* Ajusta el ancho según tus necesidades */
+    margin: 5px; /* Espacio entre las imágenes */
+}
+
+
+.imagen-principal{
+    filter: grayscale(100%);
+}
+
+#divimagenprincipal{
+    border: 4px solid #39F044;
+}
+
+
+#imagenesColocadas .cardboton{
+animation: none;
+margin-bottom: 3px;
+}
+
+
+#imgPrincipalName{
+    width: 80%;
+    text-align: center;
+}
+

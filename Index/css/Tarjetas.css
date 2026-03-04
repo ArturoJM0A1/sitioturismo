@@ -1,0 +1,60 @@
+:root {
+  --index-card-min-width-desktop: 19vw;
+  --index-card-max-width-desktop: 19vw;
+  --index-card-max-height-desktop: 88vh;
+
+  --index-card-min-width-phonePortrait: 75vw;
+  --index-card-max-height-phonePortrait: 95vh;
+
+  --index-card-min-width-phonelandscape: 25vw;
+  --index-card-max-height-phonelandscape: 60vh;
+}
+
+.cardNoticia,
+.cardEventosExternos,
+.CardEventoInterno {
+  min-width: var(--index-card-min-width-desktop);
+  max-width: var(--index-card-max-width-desktop);
+  max-height: var(--index-card-max-height-desktop);
+
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+
+  /*Vertical*/
+  .cardNoticia,
+  .cardEventosExternos,
+  .CardEventoInterno {
+    min-width: var(--index-card-min-width-phonePortrait);
+    max-height: var(--index-card-max-height-phonePortrait);
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+  /*Horizontal*/
+  .cardNoticia,
+  .cardEventosExternos,
+  .CardEventoInterno {
+    min-width: var(--index-card-min-width-phonelandscape);
+    min-height: var(--index-card-max-height-phonelandscape);
+  }
+}
+
+
+.imgTarjetaIndex {
+  margin: 0;
+  width: 80%;
+  max-height: 189px;
+  object-fit: cover;
+  border-radius: var(--borderradius);
+  padding: 0;
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+
+  /*Horizontal*/
+  .imgTarjetaIndex {
+    display: none;
+  }
+}

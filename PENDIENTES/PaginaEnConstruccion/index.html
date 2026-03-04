@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secretaría de Turismo de Hidalgo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        div {
+            text-align: center;
+            padding: 10px;
+        }
+
+        div p {
+
+            font-family: 'Farsan', cursive;
+            font-weight: bolder;
+            font-size: 45px;
+            overflow: hidden;
+            color: rgb(21, 21, 21);
+            border-right: 5px solid gray;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: 5px;
+            animation:
+                typing 4s steps(30, end),
+                blink-caret .75s step-end infinite;
+        }
+
+
+        @media only screen and (max-width: 768px) {
+            div p {
+                font-size: 25px;
+            }
+        }
+
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 60%;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            60% {
+                border-color: gray;
+            }
+        }
+
+        div img {
+            width: 80%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="animar">Página en Construcción</p>
+        <img src="logo_Hidalgo_tiene_Algo.png" alt="Hidalgo tiene Algo">
+    </div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const animatedText = document.getElementById('animar');
+
+        animatedText.addEventListener('animationend', function () {
+            setTimeout(function () {
+                animatedText.style.borderRight = 'none';
+            }, 900); 
+        });
+    });
+</script>
+
+</html>

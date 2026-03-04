@@ -1,0 +1,286 @@
+.fondoMenu {
+    border-radius: var(--borderradius);
+    background-size: 100% 633px;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    background-position-y: top;
+    height: 533px;
+    width: 98%;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+    z-index: 0;
+    transition: background-image .6s ease-in-out;
+
+    overflow: hidden;
+    /* Añadido para ocultar parte del círculo que está fuera del contenedor */
+    justify-content: flex-end;
+    /* Ajustado a 'flex-end' para que el círculo esté en la esquina derecha */
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .fondoMenu {
+        background-size: 133% 100%;
+        background-position-x: center;
+        height: 300px;
+        margin-top: 30px;
+    }
+}
+
+
+
+
+.circulomenu {
+    clip-path: circle(50% at 100% 50%);
+    background-color: var(--grisTransparente);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 5;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .circulomenu {
+        clip-path: circle(55% at 100% 50%);
+    }
+}
+
+
+
+.DivDeBienvenida {
+    height: 100%;
+    width: 30%;
+    margin-top: -1%;
+    margin-right: 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 6;
+}
+
+.tituloSecretaria1 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.tituloSecretaria2 {
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
+.tituloSecretaria1,
+.tituloSecretaria2 {
+    padding-top: 0;
+    font-weight: bold;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+
+    background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, transparent, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: reveal 1000ms ease-in-out forwards 100ms,
+        glow 1000ms ease-in-out forwards 100ms;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .tituloSecretaria1,
+    .tituloSecretaria2 {
+        font-size: 16px;
+        margin-right: 18px;
+    }
+
+    .tituloSecretaria2 {
+        margin-bottom: 2px;
+    }
+
+
+
+}
+
+
+@keyframes reveal {
+    0% {
+        background-size: 300% 300%;
+        letter-spacing: -2px;
+    }
+
+    100% {
+        background-size: 300% 300%;
+        letter-spacing: 1px;
+    }
+}
+
+
+@keyframes glow {
+    0% {
+        text-shadow: none;
+    }
+
+    50% {
+        text-shadow: 0 0 3px #fff;
+    }
+
+    100% {
+        text-shadow: 0 0 1px #fff;
+    }
+}
+
+
+.logosOficiales {
+    width: 100%;
+    background-color: transparent;
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    animation: logosOficialesfadeInRotate 2s ease-in-out forwards;
+    position: relative;
+
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes logosOficialesfadeInRotate {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .logosOficiales {
+        margin-left: -30%;
+    }
+}
+
+
+.imagenHidalgo {
+    width: 40%;
+    height: auto;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .imagenHidalgo {
+        width: 65%;
+    }
+}
+
+
+
+/*Ir hacia abajo*/
+
+.DivDezlizaAbajo {
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin-top: -35px;
+}
+
+@keyframes subirBajarDivDezAbajo {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+
+.DivDezlizaAbajo i {
+    cursor: pointer;
+    font-size: 50px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    background-color: var(--grisTransparente);
+    color: var(--blancoTransparente3);
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    animation: subirBajarDivDezAbajo .7s infinite;
+    /* Cambia 2s por la duración que desees */
+}
+
+.DivDezlizaAbajo i:hover {
+    background-color: var(--dorado);
+    font-size: 51px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .DivDezlizaAbajo {
+        height: 40px;
+    }
+
+    .DivDezlizaAbajo i {
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+    }
+
+    .DivDezlizaAbajo i:hover {
+        font-size: 41px;
+    }
+}
+
+
+.hidalgoGob {
+    position: absolute;
+    margin-bottom: -10px;
+    margin-right: -70%;
+    width: 205px;
+    background-color: var(--azulMuyClaro);
+    padding: 6px;
+    border-radius: 9px;
+    cursor: pointer;
+
+    animation: logosOficialesfadeInRotate 2s ease-in-out forwards;
+    filter: grayscale(100%);
+
+}
+
+@media only screen and (max-width: 768px) {
+    .hidalgoGob {
+        width: 91px;
+        margin-bottom: -24px;
+        margin-right: -68%;
+        border-radius: 4px;
+        padding: 3px;
+    }
+}
