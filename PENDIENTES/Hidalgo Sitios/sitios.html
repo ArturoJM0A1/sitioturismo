@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day-3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="cielo">
+    <div class="contenedorObj">
+      <div class="maguey"></div>
+      <div class="acueducto"></div>
+      <div class="toltea"></div>
+      <div class="iglesia"></div>
+      <div class="reloj"></div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+<style>
+  body {
+    background-color: #272c34;
+    display: flex;
+  }
+
+  .cielo {
+    width: 50vw;
+    height: 50vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform: rotatex(55deg);
+    scale: 1;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+
+
+  .cielo::before {
+    content: "";
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    border-radius: 30px;
+    bottom: 0;
+    background-color: rgb(250, 223, 89);
+    clip-path: ellipse(50% 100% at 50% 100%);
+  }
+
+
+ 
+
+
+  .contenedorObj {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    align-self: end;
+    justify-content: center;
+    background-color: transparent;
+    scale: 0.6;
+    padding: 0;
+    margin: 0;
+  }
+
+  .maguey {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-image: url("maguey.png");
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: -20%;
+    transform: rotatex(10deg) scaleX(1.6) scaleY(1.6);
+    translate: -70%;
+    rotate: 5deg;
+    display: flex;
+    z-index: 2;
+  }
+
+
+  .acueducto {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("acueducto.png");
+    background-size: 100% 100%;
+    background-position: center;
+    transform: scaleX(2.1) scaleY(2.1);
+    display: flex;
+    margin-bottom: 20%;
+    left: 0;
+  }
+
+
+
+
+  .toltea {
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    z-index: 1;
+    background-image: url("tolteca.png");
+    background-size: 100% 100%;
+    background-position: center;
+    margin-bottom: 20%;
+    transform: rotatex(10deg) scaleX(2.1) scaleY(2.1);
+    rotate: 0;
+    display: flex;
+    translate: -140%;
+  }
+
+  .iglesia {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-image: url("iglesia.png");
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20%;
+    transform: rotatex(10deg) scaleX(1.6) scaleY(1.6);
+    translate: 60%;
+    rotate: 3deg;
+    display: flex;
+  }
+
+  .reloj {
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    z-index: 1;
+    background-image: url("RelojPachuca.png");
+    background-size: cover;
+    background-position: center;
+    transform: rotatex(10deg) scaleX(1.3) scaleY(1.9);
+    margin-bottom: 20%;
+    translate: -11%;
+    display: flex;
+  }
+</style>
